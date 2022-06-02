@@ -13,7 +13,7 @@ import javax.persistence.*;
 @ToString
 @Entity
 @RequiredArgsConstructor
-@Table(name = "springcore")
+@Table(name = "tbl_project_details")
 public class SpringBootCoreDetails {
 
 	@Id
