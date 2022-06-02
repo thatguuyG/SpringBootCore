@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="SpringBootCore"/>
+    <meta name="description" content="SpringBootCore"/>
+    <meta name="author" content="David Kariuki">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>SpringBoot Core</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <link rel="icon" type="image/x-icon" href="../static/assets/logo/logo.png"/>
+
+    <style></style>
+
+    <!--Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+    <script></script>
+    <noscript>Sorry! Your browser does not support JavaScript.</noscript>
+
+    <base href="#" target="_self">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">SpringBootCore</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/students}">#</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <h1>SpringBoot Core Project Details</h1>
+    </div>
+    <br>
+    <table class="table table-stripped table-bordered" th:each="details, listStat : ${projectDetails}">
+        <thead class="table-dark">
+        <tr>
+            <th>Title</th>
+            <th>Details</th>
+        <tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th class="text-center">Project Name</th>
+            <td th:text="${details.projectName}"></td>
+        </tr>
+        <tr>
+            <th class="text-center">Project Start Date</th>
+            <td th:text="${details.projectStartDate}"></td>
+        </tr>
+        <tr>
+            <th class="text-center">Project Description</th>
+            <td th:text="${details.projectDescription}"></td>
+        </tr>
+        <tr>
+            <th class="text-center">Project Language</th>
+            <td th:text="${details.projectLanguage}"></td>
+        </tr>
+        <tr>
+            <th class="text-center">Project Framework</th>
+            <td th:text="${details.projectFramework}"></td>
+        </tr>
+        <tr></tr>
+        </tbody>
+        <tfoot>
+        <tr></tr>
+        <tr>
+            <td colspan="2" class="text-center">
+                <a th:href="@{/springbootcore/update/{id}(id=${details.id})}"
+                   class="btn btn-primary">Update Details</a>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<footer></footer>
+</body>
+</html>
