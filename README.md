@@ -20,14 +20,14 @@ Spring project to Re-visit SpringBoot Concepts.
 
 |Contents|
 |-|
-|Components|
-|Controllers|
-|Services|
-|Service Implementation|
-|Entities|
-|Repositories -> Spring Data JPA, Hibernate|
+| Spring Components |
+| Spring Controllers |
+| Spring Services |
+| Spring Service Implementation |
+| Spring Entities |
+| Spring Data Repositories -> Spring Data JPA, Hibernate|
 ||
-||
+|Spring Security|
 ||
 ||
 ||
