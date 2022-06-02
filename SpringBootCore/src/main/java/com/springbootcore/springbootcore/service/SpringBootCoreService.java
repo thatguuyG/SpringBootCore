@@ -13,5 +13,5 @@ package com.springbootcore.springbootcore.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SpringBootCoreService {
+public interface SpringBootCoreService {
 }
