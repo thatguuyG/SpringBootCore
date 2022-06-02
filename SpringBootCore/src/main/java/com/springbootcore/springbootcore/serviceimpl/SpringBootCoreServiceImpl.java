@@ -27,7 +27,7 @@ public class SpringBootCoreServiceImpl implements SpringBootCoreService {
 	 * Method to register SpringCore Bean Details
 	 *
 	 * @param springBootCoreDetails - SpringBootCoreDetails Entity
-	 * @return SpringCore
+	 * @return SpringBootCore
 	 */
 	@Override
 	public SpringBootCoreDetails registerSpringCoreBeanDetails(SpringBootCoreDetails springBootCoreDetails) {
@@ -43,5 +43,16 @@ public class SpringBootCoreServiceImpl implements SpringBootCoreService {
 	@Override
 	public SpringBootCoreDetails getSpringCoreBeanDetails(Long id) {
 		return springBootCoreRepository.findById(id).orElse(null);
+	}
+
+	/**
+	 * Method to update project details
+	 *
+	 * @param springBootCoreDetails - SpringBootCoreDetails Entity
+	 * @return SpringBootCore
+	 */
+	@Override
+	public SpringBootCoreDetails updateProjectDetails(SpringBootCoreDetails springBootCoreDetails) {
+		return springBootCoreRepository.save(springBootCoreDetails);
 	}
 }

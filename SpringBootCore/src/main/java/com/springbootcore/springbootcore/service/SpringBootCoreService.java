@@ -31,4 +31,12 @@ public interface SpringBootCoreService {
 	 * @return SpringBootCoreDetails
 	 */
 	SpringBootCoreDetails getSpringCoreBeanDetails(Long id);
+
+	/**
+	 * Interface method to update project details
+	 *
+	 * @param springBootCoreDetails - SpringBootCoreDetails Entity
+	 * @return SpringBootCore
+	 */
+	SpringBootCoreDetails updateProjectDetails(SpringBootCoreDetails springBootCoreDetails);
 }
