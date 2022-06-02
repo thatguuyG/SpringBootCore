@@ -1,3 +1,13 @@
+/**
+ * SecurityConfiguration Class
+ *
+ * @author - David Kariuki
+ * @version - 1.0.0
+ * @apiNote - Spring project to Re-visit SpringBoot Concepts.
+ * @copyright - Public Domain
+ * @since - 2/6/2022
+ */
+
 package com.springbootcore.springbootcore.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -7,7 +17,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 @Configuration
 @EnableWebSecurity(debug = true)
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
