@@ -42,7 +42,7 @@ Spring project to Re-visit SpringBoot Core Concepts.
 <br>
 
 | Functionality |
-||
+| -|
 ||
 ||
 | View project details |
