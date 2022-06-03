@@ -14,11 +14,9 @@ import com.springbootcore.springbootcore.entity.SpringBootCoreDetails;
 import com.springbootcore.springbootcore.serviceimpl.SpringBootCoreServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
+@RequestMapping("/")
 @Controller
 public class SpringBootCoreController {
 
@@ -44,8 +42,9 @@ public class SpringBootCoreController {
 		return "updateprojectdetails";
 	}
 
-	@PostMapping("/springbootcore/api/{id}")
-	public String updateStudentDetails(@PathVariable Long id, @ModelAttribute("details") SpringBootCoreDetails springBootCoreDetailsNew) {
+	@PutMapping("/springbootcore/api/{id}")
+	public String updateStudentDetails(@PathVariable Long id,
+									   @ModelAttribute("details") SpringBootCoreDetails springBootCoreDetailsNew) {
 
 		SpringBootCoreDetails springBootCoreDetails = new SpringBootCoreDetails();
 		springBootCoreDetails.setId(springBootCoreDetailsNew.getId());
