@@ -14,7 +14,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
 
-    <link rel="icon" type="image/x-icon" href="../static/assets/icons/logo/logo.png"/>
+    <link rel="icon" type="image/x-icon" href="../../static/assets/icons/logo/logo.png"/>
 
     <style></style>
 
@@ -34,25 +34,10 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">SpringBootCore</a>
-
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/springbootcore/api}">Home</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<br><br>
+<!--Navigation Bar-->
+<div>
+    <header th:insert="fragments/topbar-nav :: topbar-nav"></header>
+</div>
 
 <div class="container">
     <div class="row">
@@ -63,7 +48,7 @@
                 <h3 class="text-center">Error <strong>404</strong>> -> Resource not found!! </h3>
                 <br>
                 <div class="text-center">
-                    <img src="../static/assets/icons/ic_error.png" width="96" class="img-responsive"
+                    <img src="../../static/assets/icons/ic_error.png" width="96" class="img-responsive"
                          alt="Error" style="display:block !important; max-width: 30% !important;
                          height: auto !important;">
                 </div>
