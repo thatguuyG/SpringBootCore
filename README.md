@@ -1,10 +1,7 @@
 # SpringBootCore
 Spring project to Re-visit SpringBoot Core Concepts.
 
-| [![SpringBoot Core Concepts](https://img.shields.io/badge/DAVID-KARIUKi-<COLOR>.svg)](https://shields.io/) | !
-[Project Views]
-(https://komarev.com/ghpvc/?username=david-kariuki/SpringBootCore/&color=green) | ![Stars](https://img.shields.
-io/github/stars/david-kariuki/SpringBootCore/?label=Project%20Stars&logo=Project%20stars&logoColor=g) |
+| [![SpringBootCore](https://img.shields.io/badge/SpringBootCore-Concepts-<COLOR>.svg)](https://shields.io/) | ![Stars](https://img.shields.io/github/stars/david-kariuki/springbootcore?style=social) | ![Forks](https://img.shields.io/github/forks/david-kariuki/springbootcore?style=social) |
 --| --| --|
 
 | Programming/Markup/Styling<br>Used | Frameworks Used <br> |
