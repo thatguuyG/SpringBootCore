@@ -40,12 +40,15 @@ public class SpringBootCoreServiceImpl implements SpringBootCoreService {
 	 *
 	 * @param id - Id
 	 * @return SpringBootCoreDetails
+	 * @throws ResourceNotFoundException - ResourceNotFoundException
 	 */
 	@Override
-	public SpringBootCoreDetails getSpringCoreBeanDetails(Long id) {
+	public SpringBootCoreDetails getSpringCoreBeanDetails(Long id)
+			throws ResourceNotFoundException {
 
 		// Get record by Id throwing exception if record not found by Id
-		return springBootCoreRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Project Details", "Id", String.valueOf(id)));
+		return springBootCoreRepository.findById(id).orElseThrow(
+				() -> new ResourceNotFoundException("Project Details", "Id", String.valueOf(id)));
 	}
 
 	/**
@@ -53,9 +56,11 @@ public class SpringBootCoreServiceImpl implements SpringBootCoreService {
 	 *
 	 * @param springBootCoreDetails - SpringBootCoreDetails Entity
 	 * @return SpringBootCore
+	 * @throws ResourceNotFoundException - ResourceNotFoundException
 	 */
 	@Override
-	public SpringBootCoreDetails updateProjectDetails(SpringBootCoreDetails springBootCoreDetails) {
+	public SpringBootCoreDetails updateProjectDetails(SpringBootCoreDetails springBootCoreDetails)
+			throws ResourceNotFoundException {
 		// Check for record
 		if (getSpringCoreBeanDetails(springBootCoreDetails.getId()) != null) {
 			return springBootCoreRepository.save(springBootCoreDetails);

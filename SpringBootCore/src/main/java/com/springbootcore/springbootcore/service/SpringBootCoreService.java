@@ -11,6 +11,7 @@
 package com.springbootcore.springbootcore.service;
 
 import com.springbootcore.springbootcore.entity.SpringBootCoreDetails;
+import com.springbootcore.springbootcore.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -29,14 +30,16 @@ public interface SpringBootCoreService {
 	 *
 	 * @param id - Id
 	 * @return SpringBootCoreDetails
+	 * @throws ResourceNotFoundException -  ResourceNotFoundException
 	 */
-	SpringBootCoreDetails getSpringCoreBeanDetails(Long id);
+	SpringBootCoreDetails getSpringCoreBeanDetails(Long id) throws ResourceNotFoundException;
 
 	/**
 	 * Interface method to update project details
 	 *
 	 * @param springBootCoreDetails - SpringBootCoreDetails Entity
 	 * @return SpringBootCore
+	 * @throws ResourceNotFoundException - ResourceNotFoundException
 	 */
-	SpringBootCoreDetails updateProjectDetails(SpringBootCoreDetails springBootCoreDetails);
+	SpringBootCoreDetails updateProjectDetails(SpringBootCoreDetails springBootCoreDetails) throws ResourceNotFoundException;
 }
