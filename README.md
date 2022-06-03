@@ -12,9 +12,8 @@ Spring project to Re-visit SpringBoot Core Concepts.
 |-|-|
 | Java |
 || Springboot |
-|| Hibernate | 
+|| Hibernate (Spring Data JPA) | 
 || Lombok |
-|| Spring Data JPA |
 | JavaScript |
 || JQuery |
 |CSS|
