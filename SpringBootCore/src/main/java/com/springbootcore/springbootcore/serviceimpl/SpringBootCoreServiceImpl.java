@@ -11,6 +11,7 @@
 package com.springbootcore.springbootcore.serviceimpl;
 
 import com.springbootcore.springbootcore.entity.SpringBootCoreDetails;
+import com.springbootcore.springbootcore.exception.ResourceNotFoundException;
 import com.springbootcore.springbootcore.repository.SpringBootCoreRepository;
 import com.springbootcore.springbootcore.service.SpringBootCoreService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,9 @@ public class SpringBootCoreServiceImpl implements SpringBootCoreService {
 	 */
 	@Override
 	public SpringBootCoreDetails getSpringCoreBeanDetails(Long id) {
-		return springBootCoreRepository.findById(id).orElse(null);
+
+		// Get record by Id throwing exception if record not found by Id
+		return springBootCoreRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Project Details", "Id", String.valueOf(id)));
 	}
 
 	/**
@@ -53,6 +56,12 @@ public class SpringBootCoreServiceImpl implements SpringBootCoreService {
 	 */
 	@Override
 	public SpringBootCoreDetails updateProjectDetails(SpringBootCoreDetails springBootCoreDetails) {
-		return springBootCoreRepository.save(springBootCoreDetails);
+		// Check for record
+		if (getSpringCoreBeanDetails(springBootCoreDetails.getId()) != null) {
+			return springBootCoreRepository.save(springBootCoreDetails);
+		}
+
+		// Throw exception if record not found
+		throw new ResourceNotFoundException("Spring Details", "Id", springBootCoreDetails.getId().toString());
 	}
 }

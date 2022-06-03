@@ -14,7 +14,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
 
-    <link rel="icon" type="image/x-icon" href="../static/assets/logo/logo.png"/>
+    <link rel="icon" type="image/x-icon" href="../static/assets/icons/logo/logo.png"/>
 
     <style></style>
 
@@ -40,32 +40,18 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">SpringBootCore</a>
-
-    <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{/students}">#</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<br><br>
+<!--Navigation Bar-->
+<div>
+    <header th:insert="fragments/topbar-nav :: topbar-nav"></header>
+</div>
 
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-            <h1 class="text-center">Update Student Details </h1>
+            <br>
+            <h1 class="text-center">Update Project Details </h1>
             <div class="card-body">
-                <form th:action="@{/springbootcore/{id}(id=${details.id})}" th:object="${details}" method="POST">
+                <form th:action="@{/springbootcore/api/{id}(id=${details.id})}" th:object="${details}" method="POST">
                     <div class="form-group">
                         <br><label for="projectName">Project name</label>
                         <input id="projectName" type="text" name="projectName" th:field="*{projectName}"
@@ -93,8 +79,8 @@
                                    onkeydown="return false">
                         </div>
                         <br><br>
-                        <div class="box-footer">
-                            <button type="submit" class="btn btn-primary">Save</button>
+                        <div class="box-footer text-center">
+                            <button type="submit" class="btn btn-primary">Save Project Details</button>
                         </div>
                     </div>
                 </form>

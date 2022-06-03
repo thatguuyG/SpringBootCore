@@ -1,14 +1,19 @@
 # SpringBootCore
-Spring project to Re-visit SpringBoot Concepts.
+Spring project to Re-visit SpringBoot Core Concepts.
 
+<br>
 
-| Programming/Markup/Styling<br>Used | Frameworks Used <br>|
+| [![SpringBootCore](https://img.shields.io/badge/SpringBootCore-Concepts-<COLOR>.svg)](https://shields.io/) | ![Stars](https://img.shields.io/github/stars/david-kariuki/springbootcore?style=social) | ![Forks](https://img.shields.io/github/forks/david-kariuki/springbootcore?style=social) |
+--| --| --|
+
+<br>
+
+| Programming/Markup/Styling<br>Used | Frameworks Used <br> |
 |-|-|
 | Java |
 || Springboot |
-|| Hibernate | 
+|| Hibernate (Spring Data JPA) | 
 || Lombok |
-|| Spring Data JPA |
 | JavaScript |
 || JQuery |
 |CSS|
@@ -18,17 +23,27 @@ Spring project to Re-visit SpringBoot Concepts.
 
 <br>
 
-|Contents|
+| Contents |
 |-|
 | Spring Components |
 | Spring Controllers |
 | Spring Services |
 | Spring Service Implementation |
 | Spring Entities |
-| Spring Data Repositories -> Spring Data JPA, Hibernate|
+| Spring Data Repositories -> Spring Data JPA, Hibernate |
+| Spring Security |
 ||
-|Spring Security|
 ||
 ||
+||
+||
+
+<br>
+
+| Functionality |
+| -|
+||
+||
+| View project details |
 ||
 
