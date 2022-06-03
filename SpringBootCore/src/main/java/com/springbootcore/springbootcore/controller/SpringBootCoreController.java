@@ -30,7 +30,7 @@ public class SpringBootCoreController {
 		this.springBootCoreService = springBootCoreService;
 	}
 
-	@GetMapping(value = {"", "/", " ", "/springbootcore"})
+	@GetMapping(value = {"", "/", " ", "/springbootcore", "/springbootcore/api"})
 	public String handleRequests(Model model) {
 
 		model.addAttribute("projectDetails", springBootCoreService.getSpringCoreBeanDetails(1L));
@@ -38,13 +38,13 @@ public class SpringBootCoreController {
 		return "projectDetails";
 	}
 
-	@GetMapping("/springbootcore/update/{id}")
+	@GetMapping("/springbootcore/api/update/{id}")
 	public String showUpdateDetailsPage(@PathVariable Long id, Model model) {
 		model.addAttribute("details", springBootCoreService.getSpringCoreBeanDetails(id));
 		return "updateprojectdetails";
 	}
 
-	@PostMapping("springbootcore/{id}")
+	@PostMapping("/springbootcore/api/{id}")
 	public String updateStudentDetails(@PathVariable Long id, @ModelAttribute("details") SpringBootCoreDetails springBootCoreDetailsNew) {
 
 		SpringBootCoreDetails springBootCoreDetails = new SpringBootCoreDetails();
@@ -57,6 +57,6 @@ public class SpringBootCoreController {
 
 		springBootCoreService.updateProjectDetails(springBootCoreDetails); // Update
 
-		return "redirect:/springbootcore"; // redirect to index
+		return "redirect:/springbootcore/api"; // redirect to index
 	}
 }
