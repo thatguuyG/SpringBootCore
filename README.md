@@ -4,6 +4,8 @@ Spring project to Re-visit SpringBoot Core Concepts.
 | [![SpringBootCore](https://img.shields.io/badge/SpringBootCore-Concepts-<COLOR>.svg)](https://shields.io/) | ![Stars](https://img.shields.io/github/stars/david-kariuki/springbootcore?style=social) | ![Forks](https://img.shields.io/github/forks/david-kariuki/springbootcore?style=social) |
 --| --| --|
 
+<br>
+
 | Programming/Markup/Styling<br>Used | Frameworks Used <br> |
 |-|-|
 | Java |
